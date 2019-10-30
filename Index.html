@@ -23,11 +23,13 @@
 
 	<link href="https://devdauk-eciam.cs85.force.com/SocketEnergy/servlet/servlet.loginwidgetcontroller?type=css" rel="stylesheet" type="text/css" />
 	<script src="https://devdauk-eciam.cs85.force.com/SocketEnergy/servlet/servlet.loginwidgetcontroller?type=javascript_widget" async defer></script>
-   	<script language="javascript">
+   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
 	
-	window.onload = function() {
+	$("#yourLink").click(function(e){
 		document.getElementById('sfid-self-registration').setAttribute('href','https://www.google.com');
-	};
+	})
+	
+	
 	
 	
  function onLogin(identity) {
