@@ -24,6 +24,12 @@
 	<link href="https://devdauk-eciam.cs85.force.com/SocketEnergy/servlet/servlet.loginwidgetcontroller?type=css" rel="stylesheet" type="text/css" />
 	<script src="https://devdauk-eciam.cs85.force.com/SocketEnergy/servlet/servlet.loginwidgetcontroller?type=javascript_widget" async defer></script>
    	<script language="javascript">
+	
+	window.onload = function() {
+		document.getElementById('sfid-self-registration').setAttribute('href','https://www.google.com');
+	};
+	
+	
  function onLogin(identity) {
 		
 		 var targetDiv = document.querySelector(SFIDWidget.config.target);	
