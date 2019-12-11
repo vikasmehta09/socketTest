@@ -43,18 +43,12 @@
 	
 	
  function onLogin(identity) {
-		
-	 
-	 alert(JSON.stringify(identity));
-	  alert("RAW:::::"+identity);
-	 alert(identity.username);
-	 //alert(identity.Customer_ID__c);
-
-	 console.log("vikas");
+	 console.log(identity);
+	 const jwt = window.localStorage;
+	 console.log(jwt);
+	 const jwt2 = window.localStorage.getItem('00D0D0000008bYZ0050D000002ifVC');
+	 console.log(jwt2);
  }
-	function onLogout() {
-       
-    }
 </script>
 </head>
 
