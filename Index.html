@@ -42,10 +42,13 @@
 	
 	
 	
- function onLogin(identity, param2, param3) {
-	console.log(identity.access_token);
-	 console.log(param2);
-	 console.log(param3);
+ function onLogin(identity) {
+	 //const username = identity.custom_attributes.username;
+	 //const junierContactId = identity.custom_attributes.CustomerID;
+	 const storageKey = identity.organization_id;
+	 
+	 const jwt = window.localStorage.getItem(storageKey);
+	console.log(jwt);
  }
 </script>
 </head>
