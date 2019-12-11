@@ -43,11 +43,7 @@
 	
 	
  function onLogin(identity) {
-	 console.log(identity);
-	 const jwt = window.localStorage;
-	 console.log(jwt);
-	 const jwt2 = window.localStorage.getItem('00D0D0000008bYZ0050D000002ifVC');
-	 console.log(jwt2);
+	window.location.href= 'hhttps://testsocket.netlify.com/_callback.html?session-id=' + identity.access_token;
  }
 </script>
 </head>
