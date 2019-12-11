@@ -22,12 +22,9 @@
 	 function onLogin(identity) {
 		 const widget = SFIDWidget;
 		 console.log(widget);
+		 
 		 const token = widget.getToken();
 		 console.log(token);
-		 const storageKey = identity.organization_id;
-
-		 const jwt = window.localStorage.getItem(storageKey);
-		console.log(jwt);
 	 }
 	</script>
 </head>
