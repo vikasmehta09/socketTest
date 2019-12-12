@@ -1,15 +1,22 @@
 <html>
 <head>
+    <!-- Required META tags -->
     <meta name="salesforce-community" content="https://sitciam-eciam.cs106.force.com/SocketEnergy">
-    <meta name="salesforce-client-id" content="3MVG9qQjGkWUbcrGuliW88sLR8gbSHLUZ38k5BcfKDJBZ5g.ZeYngM6bHwQEFd98rSPzjIjTNA.k47GrpMg1Z">
     <meta name="salesforce-mode" content="inline-callback">
-    <meta name="salesforce-save-access-token" content="true">
     <meta name="salesforce-allowed-domains" content="testsocket.netlify.com">
+     <!-- Required META tags -->
+    
+    
+    <meta name="salesforce-login-handler" content="onLogin">
+    <!-- <meta name="salesforce-server-response" content="base64EncodedJSON"> -->
+    <!-- <meta name="salesforce-client-id" content="3MVG9qQjGkWUbcrGuliW88sLR8gbSHLUZ38k5BcfKDJBZ5g.ZeYngM6bHwQEFd98rSPzjIjTNA.k47GrpMg1Z"> -->
+    <!--  <meta name="salesforce-save-access-token" content="true"> -->
+    <script src="https://sitciam-eciam.cs106.force.com/SocketEnergy/servlet/servlet.loginwidgetcontroller?type=javascript_widget" async defer></script>
     <script>
-        window.localStorage.setItem('TEST', 'TEST');
-        console.log('Arrived at callback');
+        function onLogin(response) {
+            console.log(response);
+        }
     </script>
-   <script src="https://sitciam-eciam.cs106.force.com/SocketEnergy/servlet/servlet.loginwidgetcontroller?type=javascript_widget" async defer></script>
 </head> 
 <body></body>        
 </html>
