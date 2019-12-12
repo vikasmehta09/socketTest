@@ -13,11 +13,18 @@
     <!--  <meta name="salesforce-save-access-token" content="true"> -->
     
     <script>
+        var hash = window.location.hash.substr(1);
+
+        var result = hash.split('&').reduce(function (result, item) {
+            var parts = item.split('=');
+            result[parts[0]] = parts[1];
+            return result;
+        }, {});
+        
+        console.log(result);
+        window.localStorage.setItem('result',result);
         debugger;
-        function onLogin(response) {
-            alert('logged in!');
-            console.log(response);
-        }
+        
     </script>
 
     <script src="https://sitciam-eciam.cs106.force.com/SocketEnergy/servlet/servlet.loginwidgetcontroller?type=javascript_widget" async defer></script>
