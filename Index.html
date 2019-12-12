@@ -10,6 +10,7 @@
         <meta name="salesforce-login-handler" content="onLogin">
         <meta name="salesforce-logout-handler" content="onLogout">
 	<!-- <meta name="salesforce-save-access-token" content="true"> -->
+	<meta name="salesforce-server-response" content="base64EncodedJSON">
 	<meta name="salesforce-forgot-password-enabled" content="true">
 	<meta name="salesforce-self-register-enabled" content="true">
 	<meta name="salesforce-server-starturl" content="https://sitciam-eciam.cs106.force.com/services/oauth2/authorize?response_type=token&client_id=3MVG9qQjGkWUbcrGuliW88sLR8gbSHLUZ38k5BcfKDJBZ5g.ZeYngM6bHwQEFd98rSPzjIjTNA.k47GrpMg1Z&redirect_uri=https%3A%2F%2Ftestsocket.netlify.com%2F_callback.html&state=%2F">
@@ -20,12 +21,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script>
 	 function onLogin(identity) {
+		 console.log('Logged in...');
 		 console.log('IDENTITIY:', identity);
-		 const widget = SFIDWidget;
-		 console.log(widget);
-		 
-		 const token = widget.getToken();
-		 console.log(token);
 	 }
 	</script>
 </head>
