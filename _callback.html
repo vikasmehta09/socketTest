@@ -21,8 +21,8 @@
             return result;
         }, {});
         
-        console.log(result);
-        window.localStorage.setItem('result',result);
+        console.log('Access token:', result.access_token);
+        window.localStorage.setItem('result',result.access_token);
         debugger;
         
     </script>
