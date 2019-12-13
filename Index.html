@@ -1,42 +1,80 @@
+
 <!DOCTYPE html> 
+
 <html>
+  
 <head>
-	<title>Login Page</title>
+
+	<title>Login Page1</title>
+	<!--<link href="reset.css" rel="stylesheet">-->
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,600" type="text/css" rel="stylesheet">
+	<!--<link href="main.css" rel="stylesheet">-->
 	<meta name="salesforce-community" content="https://sitciam-eciam.cs106.force.com/SocketEnergy">
 	<meta name="salesforce-client-id" content="3MVG9qQjGkWUbcrGuliW88sLR8gbSHLUZ38k5BcfKDJBZ5g.ZeYngM6bHwQEFd98rSPzjIjTNA.k47GrpMg1Z">
 	<meta name="salesforce-redirect-uri" content="https://testsocket.netlify.com/_callback.html">
-	<meta name="salesforce-mode" content="inline">
-	<meta name="salesforce-mask-redirects" content="false">
+	<meta name="salesforce-mode" content="modal">
 	<meta name="salesforce-target" content="#sign-in-link">
-        <meta name="salesforce-login-handler" content="onLogin">
-        <meta name="salesforce-logout-handler" content="onLogout">
-	<!--<meta name="salesforce-server-callback" content="true">-->
-	<meta name="salesforce-save-access-token" content="true">
-	<!-- <meta name="salesforce-server-response" content="base64EncodedJSON"> -->
+    <meta name="salesforce-login-handler" content="onLogin">
+    <meta name="salesforce-logout-handler" content="onLogout">
+	 <meta name="salesforce-save-access-token" content="true">
 	<meta name="salesforce-forgot-password-enabled" content="true">
 	<meta name="salesforce-self-register-enabled" content="true">
-	<!--<meta name="salesforce-server-starturl" content="https://sitciam-eciam.cs106.force.com/SocketEnergy/services/oauth2/authorize?response_type=token& client_id=3MVG9qQjGkWUbcrGuliW88sLR8gbSHLUZ38k5BcfKDJBZ5g.ZeYngM6bHwQEFd98rSPzjIjTNA.k47GrpMg1Z&redirect_uri=https%3A%2F%2Ftestsocket.netlify.com%2F_callback.html&state=%2F"> -->
+	<meta name="salesforce-server-starturl" content="https://sitciam-eciam.cs106.force.com/services/oauth2/authorize?response_type=token&client_id=3MVG9qQjGkWUbcrGuliW88sLR8gbSHLUZ38k5BcfKDJBZ5g.ZeYngM6bHwQEFd98rSPzjIjTNA.k47GrpMg1Z&redirect_uri=https%3A%2F%2Ftestsocket.netlify.com%2F_callback.html&state=%2F">
 	
-	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,600" type="text/css" rel="stylesheet">
 	<link href="https://sitciam-eciam.cs106.force.com/SocketEnergy/servlet/servlet.loginwidgetcontroller?type=css" rel="stylesheet" type="text/css" />
 	<script src="https://sitciam-eciam.cs106.force.com/SocketEnergy/servlet/servlet.loginwidgetcontroller?type=javascript_widget" async defer></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   	
+	
 	<script>
-	 function onLogin(identity) {
-		 console.log('Logged in...');
-		 console.log('IDENTITIY:', identity);
-	 }
-	</script>
+	/*$(document).ready(function(){
+		$("#sign-in-link").click(function(){
+		//event.preventDefault();
+		//alert('test');
+		//$("#sfid-self-registration").attr('href','https://dev.pure.co.uk/register');
+			//document.getElementById('sfid-self-registration').setAttribute('href','https://www.google.com');
+			
+		//$('#sfid_xdomain').attr('src', 'https://www.google.com');
+		});
+		
+		
+	});*/
+	
+	
+	
+	
+ function onLogin(identity) {
+		
+	 
+	 console.log(JSON.stringify(identity));
+	 console.log(identity.username);
+	 //alert(identity.Customer_ID__c);
+
+	 console.log("vikas");
+ }
+	function onLogout() {
+       
+    }
+</script>
 </head>
 
 <body>
-	<div id="sign-in-link" style="position: absolute; top:20px; right:20px;"></div>
-	<form name="loginForm" method="post" action="login.php">
-		<table width="20%" bgcolor="0099CC" align="center">
-			<tr>
-				<td colspan=2><center><font size=4><b>EON Portal1</b></font></center></td>
-			</tr>
-		</table>
-	</form>
+  <div id="sign-in-link" style  = "position: absolute; top:20px; right:20px;"></div>
+<form name="loginForm" method="post" action="login.php">
+<table width="20%" bgcolor="0099CC" align="center">
+
+<tr>
+<td colspan=2><center><font size=4><b>EON Portal1</b></font></center></td>
+</tr>
+
+
+
+
+
+
+</table>
+</form>
+
+
 </body>
 </html>
